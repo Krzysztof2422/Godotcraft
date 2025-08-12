@@ -3,8 +3,8 @@ extends GridMap
 var particle_scene = preload("res://scenes/block_break_particles.tscn")
 var instance
 
-@export var chunk_size_x: int = 64
-@export var chunk_size_z: int = 64
+@export var chunk_size_x: int = 150
+@export var chunk_size_z: int = 150
 @export var height_scale: int = 20
 
 var base_noise := FastNoiseLite.new()
