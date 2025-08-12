@@ -54,11 +54,11 @@ texture = ExtResource("2_g2els")
 metadata/_edit_use_anchors_ = true
 
 [node name="Hotbar" type="ItemList" parent="."]
-anchors_preset = 7
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_right = 0.502083
+anchor_bottom = 1.0037
 offset_left = -378.0
 offset_top = -105.0
 offset_right = 378.0
@@ -87,8 +87,8 @@ item_8/text = "9"
 item_8/icon = ExtResource("11_4r5pv")
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit" type="LineEdit" parent="."]
-offset_right = 206.0
-offset_bottom = 31.0
-scale = Vector2(2, 2)
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 453.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 36
 text = "Prototype 7 by Krycha_31"

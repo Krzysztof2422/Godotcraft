@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://whiayr1r5l68"]
+[gd_scene load_steps=8 format=3 uid="uid://whiayr1r5l68"]
 
 [ext_resource type="PackedScene" uid="uid://b04omoio0l3d4" path="res://scenes/player.tscn" id="2_rvslj"]
 [ext_resource type="MeshLibrary" uid="uid://cs8g6o6vgh51k" path="res://resources/blocks.tres" id="3_0bbpv"]
@@ -18,14 +18,6 @@ sky = SubResource("Sky_rvslj")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvslj"]
-transparency = 1
-albedo_color = Color(0.317647, 0.321569, 1, 0.745098)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_0bbpv"]
-material = SubResource("StandardMaterial3D_rvslj")
-size = Vector2(5000, 5000)
-
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -37,11 +29,7 @@ shadow_enabled = true
 directional_shadow_mode = 0
 
 [node name="Player" parent="." instance=ExtResource("2_rvslj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 7.60729, 3)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37428, 4.26891, -1.51604)
-mesh = SubResource("PlaneMesh_0bbpv")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 45.5504, 3)
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

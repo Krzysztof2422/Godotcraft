@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvvxkle2kedd6"
+uid="uid://t3cfff16xsw"
 path.s3tc="res://.godot/imported/QuestionMark_Blocks_PixelArt.png-664feaea7c7a723aee7c9ce557447e6a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "2caec07ea92e53b350bf7eee02bedc0a"
 }
 
 [deps]
