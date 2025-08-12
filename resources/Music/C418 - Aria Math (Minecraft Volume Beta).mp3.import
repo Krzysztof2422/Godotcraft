@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdf2hm0o7k553"
+path="res://.godot/imported/C418 - Aria Math (Minecraft Volume Beta).mp3-8c0933a8da56a2e8179e501e012f7886.mp3str"
+
+[deps]
+
+source_file="res://resources/Music/C418 - Aria Math (Minecraft Volume Beta).mp3"
+dest_files=["res://.godot/imported/C418 - Aria Math (Minecraft Volume Beta).mp3-8c0933a8da56a2e8179e501e012f7886.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

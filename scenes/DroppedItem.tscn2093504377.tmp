@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxrbcsy27eeal"]
+
+[ext_resource type="Script" uid="uid://bfq836c3p1fco" path="res://DroppedItem.gd" id="1_ip0rf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hptdf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xr8br"]
+
+[node name="Node3D" type="RigidBody3D"]
+script = ExtResource("1_ip0rf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_hptdf")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_xr8br")

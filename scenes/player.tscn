@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://b04omoio0l3d4"]
+
+[ext_resource type="Script" uid="uid://cbsl27wlxcwnk" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://cdw8atfqv0c8e" path="res://models/cross.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://cwvqge1ptuekf" path="res://resources/icons/log.png" id="3_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://8oshv3fijjpp" path="res://resources/icons/planks.png" id="4_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://c4oqgcd6depx7" path="res://resources/icons/leaves.png" id="5_jej6c"]
+[ext_resource type="Texture2D" uid="uid://cw0d1c72s5pew" path="res://resources/icons/dirt.png" id="6_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://dgrxi8ligx5d6" path="res://resources/icons/grass.png" id="7_oprun"]
+[ext_resource type="Texture2D" uid="uid://qskn0bgpvx74" path="res://resources/icons/stone.png" id="8_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://jfvtv6jas3rs" path="res://resources/icons/stone_bricks.png" id="9_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://c1cd4b6hjedj4" path="res://resources/icons/bricks.png" id="10_fulsm"]
+[ext_resource type="Texture2D" uid="uid://bne126fltiw5j" path="res://resources/icons/snow_grass.png" id="11_4r5pv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+radius = 0.9
+height = 3.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
+radius = 1.0
+height = 4.0
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+script = ExtResource("1_3vyb7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_u8vuu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_3vyb7")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14617, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -8)
+
+[node name="TextureRect" type="TextureRect" parent="Camera3D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_g2els")
+metadata/_edit_use_anchors_ = true
+
+[node name="Hotbar" type="ItemList" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -378.0
+offset_top = -105.0
+offset_right = 378.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+item_count = 9
+max_columns = 9
+item_0/text = "1"
+item_0/icon = ExtResource("3_d2wvv")
+item_1/text = "2"
+item_1/icon = ExtResource("4_3v2ag")
+item_2/text = "3"
+item_2/icon = ExtResource("5_jej6c")
+item_3/text = "4"
+item_3/icon = ExtResource("6_f1ej7")
+item_4/text = "5"
+item_4/icon = ExtResource("7_oprun")
+item_5/text = "6"
+item_5/icon = ExtResource("8_a8ls1")
+item_6/text = "7"
+item_6/icon = ExtResource("9_qfm1y")
+item_7/text = "8"
+item_7/icon = ExtResource("10_fulsm")
+item_8/text = "9"
+item_8/icon = ExtResource("11_4r5pv")
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(2, 2)
+text = "Prototype 7 by Krycha_31"

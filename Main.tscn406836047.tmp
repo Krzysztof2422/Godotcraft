@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://whiayr1r5l68"]
+
+[ext_resource type="Script" uid="uid://bqp2xirmy30wv" path="res://Block.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://cdfd2o8m4fnms" path="res://Player.gd" id="2_uu6xs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6xxru"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yvhtj"]
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_6xxru")
+script = ExtResource("1_glv2v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_yvhtj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.811288, 0.584646, 0, -0.584646, 0.811288, 0, 2.05985, 0.995465)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.2382)
+script = ExtResource("2_uu6xs")
